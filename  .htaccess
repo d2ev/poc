@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Redirect main domain and www to /web/
+RewriteCond %{HTTP_HOST} ^(www\.)?shriramedutrust\.in$ [NC]
+RewriteCond %{REQUEST_URI} !^/web/
+RewriteRule ^(.*)$ /web/$1 [L]
+
+# Redirect subdomains to /web/
+RewriteCond %{HTTP_HOST} ^(srec|srpc|srs)\.shriramedutrust\.in$ [NC]
+RewriteCond %{REQUEST_URI} !^/web/
+RewriteRule ^(.*)$ /web/$1 [L]
