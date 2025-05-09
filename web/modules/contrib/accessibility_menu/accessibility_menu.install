@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Update default config values.
+ */
+function accessibility_menu_update_10001(): void {
+  $config = \Drupal::configFactory()->getEditable('accessibility_menu.settings');
+  $data = $config->get();
+  if (!isset($data['inline'])) {
+    $data['inline'] = 1;
+  }
+  if (!isset($data['plugins'])) {
+    $data['plugins'] = [
+      'contrast' => 'contrast',
+      'font_size' => 'font_size',
+      'letter_spacing' => 'letter_spacing',
+      'line_height' => 'line_height',
+      'images' => 'images',
+      'font_style' => 'font_style',
+      'cursor' => 0,
+      'reading_line' => 0,
+    ];
+  }
+  $config->setData($data);
+  $config->save();
+}

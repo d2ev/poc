@@ -1,0 +1,4 @@
+accessibility_menu.settings:
+  title: 'Accessibility Menu'
+  parent: system.admin_config_development
+  route_name: accessibility_menu.settings

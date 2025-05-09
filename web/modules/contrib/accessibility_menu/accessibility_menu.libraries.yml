@@ -1,0 +1,10 @@
+css:
+  css:
+    base:
+# Swap to plain css to remove scss_compiler module dependency
+#      misc/accessibility_menu.scss: {css_path: 'misc/'}
+      misc/accessibility_menu.css: {}
+
+js:
+  js:
+    misc/accessibility_menu.js: {}

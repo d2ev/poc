@@ -1,0 +1,34 @@
+@import 'sass/base';
+@import 'sass/fonticons';
+@import 'sass/layout';
+@import 'sass/header';
+@import 'sass/blocks';
+@import 'sass/main';
+@import 'sass/sidebar';
+@import 'sass/comment';
+@import 'sass/footer';
+@import 'sass/homepage';
+@import 'sass/components';
+@import 'sass/shortcodes';
+@import 'sass/responsive';
+
+.owl-carousel.owl-drag {
+    .owl-item {
+        padding-left: .5%;
+    }
+}
+div.sliding-popup-bottom {
+    max-width: 100% !important;
+    background-color: var(--dark) !important;
+}
+div.eu-cookie-compliance-banner {
+    p {
+        color: var(--color-heading) !important;
+    }
+    button.eu-cookie-compliance-default-button {
+        background-image: none !important;
+        background-color: var(--dark) !important;
+        font-weight: normal !important;
+        text-shadow: none !important;
+    }
+}

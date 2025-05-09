@@ -1,0 +1,11 @@
+enabled: 1
+inline: 1
+plugins:
+  contrast: contrast
+  font_size: font_size
+  letter_spacing: letter_spacing
+  line_height: line_height
+  images: images
+  font_style: font_style
+  cursor: 0
+  reading_line: 0

@@ -1,0 +1,29 @@
+<div class="b-accessibility-menu__button js-accessibility-btn am-skip" id="b-accessibility-menu"></div>
+
+<div class="b-accessibility-menu__wrapper js-accessibility-menu am-skip">
+  <div class="b-accessibility-menu am-skip">
+    <div class="b-accessibility-menu__header am-skip">
+      <div class="b-accessibility-menu__title am-skip">{{ 'Accessibility menu'|t }}</div>
+      <div class="b-accessibility-menu__close js-accessibility-close am-skip"></div>
+    </div>
+    <div class="b-accessibility-menu__content am-skip">
+      <div class="b-accessibility-menu__items am-skip">
+        {% for type, item in info.items %}
+          {% if item.access %}
+          <div class="b-accessibility-menu__item-wrapper am-skip">
+            <div class="b-accessibility-menu__item am-skip type-{{ type }}" data-type="{{ type }}" data-title="{{ item.title }}">
+              <div class="b-accessibility-menu__title am-skip"><span class="am-skip">{{ item.title }}</span></div>
+              <div class="b-accessibility-menu__links am-skip">
+                {% for id, option in item.options %}
+                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="{{ option.title }}"></div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="b-accessibility-menu__reset js-accessibility-reset am-skip">{{ 'Reset the settings'|t }}</div>
+    </div>
+  </div>
+</div>
