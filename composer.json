@@ -17,7 +17,11 @@
     "require": {
         "composer/installers": "^2.3",
         "drupal/core-composer-scaffold": "^11.1",
-        "drupal/core-recommended": "^11.1"
+        "drupal/core-recommended": "^11.1",
+        "drupal/edux": "^11.0",
+        "drupal/gin": "^4.0",
+        "drupal/thex": "^11.0",
+        "drush/drush": "^13.6"
     },
     "conflict": {
         "drupal/drupal": "*"

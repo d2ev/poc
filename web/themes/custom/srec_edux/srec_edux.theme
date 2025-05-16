@@ -1,0 +1,186 @@
+<?php
+/**
+ * @file
+ * Extra Functions for Edu X theme.
+ */
+use Drupal\file\Entity\File;
+/**
+ * Sanitise input urls.
+ */
+function santise_val_url($url) {
+	if ($url != '') {
+
+		// Sanitise (remove all illegal characters) from url.
+		$url = filter_var($url, FILTER_SANITIZE_URL);
+
+		// Validate url.
+		if (filter_var($url, FILTER_VALIDATE_URL) == TRUE) {
+			$url = $url;
+		} else {
+			$url = '#';
+		}
+		return $url;
+	}
+}
+function srec_edux_preprocess_page(array &$variables) {
+	// theme path
+	$variables['page_srec_edux_path'] = \Drupal::service('extension.list.theme')->getPath('srec_edux');
+	
+	// Layout
+	$variables['container_width'] = theme_get_setting('container_width', 'srec_edux');
+	$variables['header_width'] = theme_get_setting('header_width', 'srec_edux');
+	$variables['main_width'] = theme_get_setting('main_width', 'srec_edux');
+	$variables['footer_width'] = theme_get_setting('footer_width', 'srec_edux');
+
+	// homepage slider
+	$variables['slider_show'] = theme_get_setting('slider_show', 'srec_edux');
+	$variables['slider_code'] = theme_get_setting('slider_code', 'srec_edux');
+	$variables['slider_image'] = theme_get_setting('slider_image', 'srec_edux');
+	$slider_image_id = theme_get_setting('slider_image', 'srec_edux');
+	if(!empty($slider_image_id)) {
+		$slider_image_file = File::load($slider_image_id[0]);
+		$slider_image_file->setPermanent();
+		$slider_image_file->save();
+		$slider_image_file_usage = \Drupal::service('file.usage');
+		$slider_image_file_usage->add($slider_image_file, 'srec_edux', 'theme', $slider_image_id[0]);
+	};
+	if(!empty($slider_image_file)) {
+    $imageuri = $slider_image_file->getFileUri();
+		$variables['slider_image_path'] = \Drupal::service('file_url_generator')->generateAbsoluteString($imageuri);
+	};
+	$variables['slider_image_bg'] = theme_get_setting('slider_image_bg', 'srec_edux');
+
+	// Header
+	$variables['header_main_default'] = theme_get_setting('header_main_default', 'srec_edux');
+	$variables['header_main_padding_top'] = theme_get_setting('header_main_padding_top', 'srec_edux');
+	$variables['header_main_padding_bottom'] = theme_get_setting('header_main_padding_bottom', 'srec_edux');
+	$variables['header_page_default'] = theme_get_setting('header_page_default', 'srec_edux');
+	$variables['header_page_padding_top'] = theme_get_setting('header_page_padding_top', 'srec_edux');
+	$variables['header_page_padding_bottom'] = theme_get_setting('header_page_padding_bottom', 'srec_edux');
+	$variables['header_page_content_position'] = theme_get_setting('header_page_content_position', 'srec_edux');
+	$variables['header_login_links'] = theme_get_setting('header_login_links', 'srec_edux');
+
+	// Sidebar
+	$variables['front_sidebar'] = theme_get_setting('front_sidebar', 'srec_edux');
+	$variables['sidebar_width_default'] = theme_get_setting('sidebar_width_default', 'srec_edux');
+	$variables['sidebar_width_left'] = theme_get_setting('sidebar_width_left', 'srec_edux');
+	$variables['sidebar_width_right'] = theme_get_setting('sidebar_width_right', 'srec_edux');
+	$variables['sidebar_block_default'] = theme_get_setting('sidebar_block_default', 'srec_edux');	
+	$variables['sidebar_padding'] = theme_get_setting('sidebar_padding', 'srec_edux');
+	$variables['sidebar_radius'] = theme_get_setting('sidebar_radius', 'srec_edux');
+	$variables['sidebar_margin'] = theme_get_setting('sidebar_margin', 'srec_edux');
+	$variables['sidebar_title_font_size'] = theme_get_setting('sidebar_title_font_size', 'srec_edux');
+	$variables['sidebar_title_transform'] = theme_get_setting('sidebar_title_transform', 'srec_edux');
+
+	// Footer
+	$variables['copyright_text'] = theme_get_setting('copyright_text', 'srec_edux');
+
+	// content
+	$variables['rtl'] = theme_get_setting('rtl', 'srec_edux');
+
+	// Social
+	$variables['all_icons_show'] = theme_get_setting('all_icons_show', 'srec_edux');
+	$variables['facebook_url'] = santise_val_url(theme_get_setting('facebook_url', 'srec_edux'));
+	$variables['twitter_url'] = santise_val_url(theme_get_setting('twitter_url', 'srec_edux'));
+	$variables['instagram_url'] = santise_val_url(theme_get_setting('instagram_url', 'srec_edux'));
+	$variables['linkedin_url'] = santise_val_url(theme_get_setting('linkedin_url', 'srec_edux'));
+	$variables['youtube_url'] = santise_val_url(theme_get_setting('youtube_url', 'srec_edux'));
+	$variables['vimeo_url'] = santise_val_url(theme_get_setting('vimeo_url', 'srec_edux'));
+  $variables['telegram_url'] = santise_val_url(theme_get_setting('telegram_url', 'srec_edux'));
+  $variables['whatsapp_url'] = santise_val_url(theme_get_setting('whatsapp_url', 'srec_edux'));
+  $variables['github_url'] = santise_val_url(theme_get_setting('github_url', 'srec_edux'));
+	$variables['vk_url'] = santise_val_url(theme_get_setting('vk_url', 'srec_edux'));
+
+	// Typography
+	$variables['body_font_size'] = theme_get_setting('body_font_size', 'srec_edux');
+	$variables['body_line_height'] = theme_get_setting('body_line_height', 'srec_edux');
+	$variables['paragraph_bottom'] = theme_get_setting('paragraph_bottom', 'srec_edux');
+	$variables['headings_default'] = theme_get_setting('headings_default', 'srec_edux');
+	$variables['h1_size'] = theme_get_setting('h1_size', 'srec_edux');
+	$variables['h1_weight'] = theme_get_setting('h1_weight', 'srec_edux');
+	$variables['h1_transform'] = theme_get_setting('h1_transform', 'srec_edux');
+	$variables['h1_height'] = theme_get_setting('h1_height', 'srec_edux');
+	$variables['h2_size'] = theme_get_setting('h2_size', 'srec_edux');
+	$variables['h2_weight'] = theme_get_setting('h2_weight', 'srec_edux');
+	$variables['h2_transform'] = theme_get_setting('h2_transform', 'srec_edux');
+	$variables['h2_height'] = theme_get_setting('h2_height', 'srec_edux');
+	$variables['h3_size'] = theme_get_setting('h3_size', 'srec_edux');
+	$variables['h3_weight'] = theme_get_setting('h3_weight', 'srec_edux');
+	$variables['h3_transform'] = theme_get_setting('h3_transform', 'srec_edux');
+	$variables['h3_height'] = theme_get_setting('h3_height', 'srec_edux');
+	$variables['h4_size'] = theme_get_setting('h4_size', 'srec_edux');
+	$variables['h4_weight'] = theme_get_setting('h4_weight', 'srec_edux');
+	$variables['h4_transform'] = theme_get_setting('h4_transform', 'srec_edux');
+	$variables['h4_height'] = theme_get_setting('h4_height', 'srec_edux');
+	$variables['h5_size'] = theme_get_setting('h5_size', 'srec_edux');
+	$variables['h5_weight'] = theme_get_setting('h5_weight', 'srec_edux');
+	$variables['h5_transform'] = theme_get_setting('h5_transform', 'srec_edux');
+	$variables['h5_height'] = theme_get_setting('h5_height', 'srec_edux');
+	$variables['h6_size'] = theme_get_setting('h6_size', 'srec_edux');
+	$variables['h6_weight'] = theme_get_setting('h6_weight', 'srec_edux');
+	$variables['h6_transform'] = theme_get_setting('h6_transform', 'srec_edux');
+	$variables['h6_height'] = theme_get_setting('h6_height', 'srec_edux');
+
+	// Element -> Logo
+	$variables['logo_default'] = theme_get_setting('logo_default', 'srec_edux');
+	$variables['site_name_size'] = theme_get_setting('site_name_size', 'srec_edux');
+	$variables['site_name_weight'] = theme_get_setting('site_name_weight', 'srec_edux');
+	$variables['site_name_transform'] = theme_get_setting('site_name_transform', 'srec_edux');
+	$variables['site_name_height'] = theme_get_setting('site_name_height', 'srec_edux');
+	$variables['slogan_size'] = theme_get_setting('slogan_size', 'srec_edux');
+	$variables['slogan_transform'] = theme_get_setting('slogan_transform', 'srec_edux');
+	$variables['slogan_height'] = theme_get_setting('slogan_height', 'srec_edux');
+	$variables['slogan_style'] = theme_get_setting('slogan_style', 'srec_edux');
+	$variables['main_menu_default'] = theme_get_setting('main_menu_default', 'srec_edux');
+	$variables['main_menu_top_size'] = theme_get_setting('main_menu_top_size', 'srec_edux');
+	$variables['main_menu_top_weight'] = theme_get_setting('main_menu_top_weight', 'srec_edux');
+	$variables['main_menu_top_transform'] = theme_get_setting('main_menu_top_transform', 'srec_edux');
+	$variables['main_menu_sub_size'] = theme_get_setting('main_menu_sub_size', 'srec_edux');
+	$variables['main_menu_sub_weight'] = theme_get_setting('main_menu_sub_weight', 'srec_edux');
+	$variables['main_menu_sub_transform'] = theme_get_setting('main_menu_sub_transform', 'srec_edux');
+	
+	// Element -> Page title
+	$variables['page_title_default'] = theme_get_setting('page_title_default', 'srec_edux');
+	$variables['page_title_size_desktop'] = theme_get_setting('page_title_size_desktop', 'srec_edux');
+	$variables['page_title_size_mobile'] = theme_get_setting('page_title_size_mobile', 'srec_edux');
+	$variables['page_title_transform'] = theme_get_setting('page_title_transform', 'srec_edux');
+
+	// Element -> Button
+	$variables['button_default'] = theme_get_setting('button_default', 'srec_edux');
+	$variables['button_padding'] = theme_get_setting('button_padding', 'srec_edux');
+	$variables['button_radius'] = theme_get_setting('button_radius', 'srec_edux');
+
+	// Components -> Font icons
+	$variables['fontawesome_four'] = theme_get_setting('fontawesome_four', 'srec_edux');
+	$variables['fontawesome_five'] = theme_get_setting('fontawesome_five', 'srec_edux');
+	$variables['bootstrapicons'] = theme_get_setting('bootstrapicons', 'srec_edux');	
+	
+	// Components -> scroll to top
+	$variables['scrolltotop_on'] = theme_get_setting('scrolltotop_on', 'srec_edux');
+	
+	// Comment
+	$variables['highlight_author_comment'] = theme_get_setting('highlight_author_comment', 'srec_edux');
+}
+
+function srec_edux_preprocess_html(&$variables) {
+	$variables['base_path'] = base_path();
+	$variables['srec_edux_path'] = \Drupal::service('extension.list.theme')->getPath('srec_edux');
+	$variables['font_src'] = theme_get_setting('font_src', 'srec_edux');
+	$variables['styling'] = theme_get_setting('styling', 'srec_edux');
+	$variables['styling_code'] = theme_get_setting('styling_code', 'srec_edux');
+	$variables['slider_speed'] = theme_get_setting('slider_speed', 'srec_edux');
+}
+/**
+ * Node preprocess.
+ */
+function srec_edux_preprocess_node(array &$variables) {
+	$variables['node_author_pic'] = theme_get_setting('node_author_pic', 'srec_edux');
+	$variables['node_tags'] = theme_get_setting('node_tags', 'srec_edux');
+}
+
+/**
+ * Comment preprocess.
+ */
+function srec_edux_preprocess_comment(array &$variables) {
+	$variables['comment_user_pic'] = theme_get_setting('comment_user_pic', 'srec_edux');
+}

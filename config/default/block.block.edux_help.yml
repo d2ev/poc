@@ -1,0 +1,22 @@
+uuid: 98cfe78a-234e-49a1-a106-5370baf8e04d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - edux
+_core:
+  default_config_hash: Nq8waAq4eh0MH3Zyj4s9qVbUsYwlM31eItNtBF-rZS8
+id: edux_help
+theme: edux
+region: content
+weight: -10
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

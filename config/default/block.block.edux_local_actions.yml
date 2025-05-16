@@ -1,0 +1,20 @@
+uuid: 450fa848-2322-4849-8d29-53efb3acb9b7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - edux
+_core:
+  default_config_hash: iafjj6dXiu0D1Sfu_rZ9eZF3Ao5n1JQmGTfLCO1Xenw
+id: edux_local_actions
+theme: edux
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
