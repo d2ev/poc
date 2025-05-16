@@ -1,0 +1,9 @@
+# Ignore settings files
+web/sites/*/settings.php
+web/sites/*/settings.local.php
+
+# Ignore private service definitions (optional)
+web/sites/*/services.yml
+
+# Ignore file uploads
+web/sites/*/files/
