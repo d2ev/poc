@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function accessibility_menu_theme() {
+  $tpls = [
+    'accessibility_menu',
+  ];
+  foreach ($tpls as $tpl) {
+    $templates[$tpl] = [
+      'variables' => [
+        'info' => NULL,
+      ],
+    ];
+  }
+  return $templates;
+}
+
+/**
+ * Implements hook_locale_translation_projects_alter().
+ */
+function accessibility_menu_locale_translation_projects_alter(&$projects) {
+  $projects['accessibility_menu']['info']['interface translation server pattern'] =
+    \Drupal::service('extension.list.module')
+      ->getPath('accessibility_menu') . '/translations/%project.%language.po';
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function accessibility_menu_preprocess_html(&$vars) {
+  if (\Drupal::config('accessibility_menu.settings')->get('enabled')) {
+    $activeThemeName = \Drupal::service('theme.manager')->getActiveTheme();
+    $defaultThemeName = \Drupal::config('system.theme')->get('default');
+    if ($activeThemeName->getName() === $defaultThemeName) {
+      $block_manager = \Drupal::service('plugin.manager.block');
+      $plugin_block = $block_manager->createInstance('accessibility_menu', []);
+      $vars['page_bottom']['accessibility_menu'] = $plugin_block->build();
+    }
+  }
+}

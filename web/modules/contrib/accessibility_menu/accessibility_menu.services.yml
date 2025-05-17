@@ -1,0 +1,4 @@
+services:
+  accessibility_menu:
+    class: Drupal\accessibility_menu\AccessibilityMenu
+    autowire: true

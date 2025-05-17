@@ -1,0 +1,7 @@
+accessibility_menu.settings:
+  path: '/admin/config/development/accessibility-menu'
+  defaults:
+    _form: 'Drupal\accessibility_menu\Form\AccessibilityMenuSettingsForm'
+    _title: 'Accessibility menu settings'
+  requirements:
+    _permission: 'administer site configuration'

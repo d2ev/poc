@@ -1,0 +1,142 @@
+# $Id$
+#
+# Ukrainian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  accessibility_menu.info.yml: n/a
+#  src/Plugin/Block/AccessibilityMenu.php: n/a
+#  templates/accessibility-menu.html.twig: n/a
+#  accessibility_menu.links.menu.yml: n/a
+#  accessibility_menu.routing.yml: n/a
+#  src/AccessibilityMenu.php: n/a
+#  src/Form/AccessibilityMenuSettingsForm.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2024-12-10 12:14+0200\n"
+"PO-Revision-Date: 2024-12-10 12:14+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Ukrainian <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: accessibility_menu.info.yml:0;0 src/Plugin/Block/AccessibilityMenu.php:8 templates/accessibility-menu.html.twig:6
+msgid "Accessibility menu"
+msgstr "Налаштування доступності"
+
+#: accessibility_menu.info.yml:0
+msgid "Accessibility"
+msgstr ""
+
+#: accessibility_menu.links.menu.yml:0
+msgid "Accessibility Menu"
+msgstr ""
+
+#: accessibility_menu.routing.yml:0
+msgid "Accessibility menu settings"
+msgstr ""
+
+#: src/AccessibilityMenu.php:22 src/Form/AccessibilityMenuSettingsForm.php:49
+msgid "Contrast settings"
+msgstr "Налаштування контрасту"
+
+#: src/AccessibilityMenu.php:26
+msgid "High contrast"
+msgstr "Високий контраст"
+
+#: src/AccessibilityMenu.php:29
+msgid "Inversion"
+msgstr "Інверсія"
+
+#: src/AccessibilityMenu.php:32
+msgid "White"
+msgstr "Білий"
+
+#: src/AccessibilityMenu.php:35
+msgid "Comfort"
+msgstr "Комфорт"
+
+#: src/AccessibilityMenu.php:40;44;47;50;53 src/Form/AccessibilityMenuSettingsForm.php:50
+msgid "Font size"
+msgstr "Розмір шрифту"
+
+#: src/AccessibilityMenu.php:58 src/Form/AccessibilityMenuSettingsForm.php:51
+msgid "Letter spacing"
+msgstr "Міжбуквенний інтервал"
+
+#: src/AccessibilityMenu.php:62
+msgid "Increased interval"
+msgstr "Збільшений інтервал"
+
+#: src/AccessibilityMenu.php:65
+msgid "Moderate interval"
+msgstr "Помірний інтервал"
+
+#: src/AccessibilityMenu.php:68
+msgid "Wide interval"
+msgstr "Широкий інтервал"
+
+#: src/AccessibilityMenu.php:73 src/Form/AccessibilityMenuSettingsForm.php:52
+msgid "Line height"
+msgstr "Міжрядковий інтервал"
+
+#: src/AccessibilityMenu.php:77;82;87
+msgid "Line height (@value)"
+msgstr "Міжрядковий інтервал (@value)"
+
+#: src/AccessibilityMenu.php:94 src/Form/AccessibilityMenuSettingsForm.php:53
+msgid "Images"
+msgstr "Зображення"
+
+#: src/AccessibilityMenu.php:98
+msgid "Grayscale"
+msgstr "Чорно-білі"
+
+#: src/AccessibilityMenu.php:101
+msgid "Disabled"
+msgstr "Вимкнено"
+
+#: src/AccessibilityMenu.php:106 src/Form/AccessibilityMenuSettingsForm.php:54
+msgid "Font"
+msgstr "Шрифт"
+
+#: src/AccessibilityMenu.php:110
+msgid "Serif"
+msgstr "З засічками"
+
+#: src/AccessibilityMenu.php:113
+msgid "Sans serif"
+msgstr "Без засічок"
+
+#: src/AccessibilityMenu.php:118;122 src/Form/AccessibilityMenuSettingsForm.php:55
+msgid "Big cursor"
+msgstr "Великий курсор"
+
+#: src/AccessibilityMenu.php:127;131 src/Form/AccessibilityMenuSettingsForm.php:56
+msgid "Reading line"
+msgstr "Лінія для читання"
+
+#: src/Form/AccessibilityMenuSettingsForm.php:36
+msgid "Enable"
+msgstr "Увімкнути"
+
+#: src/Form/AccessibilityMenuSettingsForm.php:41
+msgid "Inline js"
+msgstr "Вбудувати js в сторінку"
+
+#: src/Form/AccessibilityMenuSettingsForm.php:46
+msgid "Plugins"
+msgstr "Плаґіни"
+
+#: src/Form/AccessibilityMenuSettingsForm.php:63
+msgid "Save"
+msgstr "Зберегти"
+
+#: templates/accessibility-menu.html.twig:26
+msgid "Reset the settings"
+msgstr "Скинути налаштування"
+

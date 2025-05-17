@@ -1,0 +1,12 @@
+name: 'Accessibility menu'
+description: 'Accessibility menu'
+package: Accessibility
+type: module
+core_version_requirement: ^9.3 || ^10 || ^11
+'interface translation project': accessibility_menu
+configure: accessibility_menu.settings
+
+# Information added by Drupal.org packaging script on 2024-12-10
+version: '1.0.1'
+project: 'accessibility_menu'
+datestamp: 1733828508

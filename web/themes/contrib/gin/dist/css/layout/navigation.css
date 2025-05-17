@@ -1365,3 +1365,9 @@ button.toolbar-link--sidebar-toggle[aria-expanded=true]::before {
   display: none !important;
 }
 
+ul.toolbar-block__content--content > *:not(:first-child) {
+  display: none;
+}
+/* li.toolbar-menu__item.toolbar-menu__item--level-1 > button {
+  display: none;
+} */
