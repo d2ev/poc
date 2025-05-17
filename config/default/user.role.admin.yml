@@ -12,6 +12,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.video
+    - media.type.virtual_tour
     - node.type.article
     - node.type.event
     - node.type.page
@@ -69,6 +70,7 @@ permissions:
   - 'create page content'
   - 'create remote_video media'
   - 'create video media'
+  - 'create virtual_tour media'
   - 'delete all revisions'
   - 'delete any article content'
   - 'delete any audio media'
@@ -87,6 +89,8 @@ permissions:
   - 'delete any remote_video media revisions'
   - 'delete any video media'
   - 'delete any video media revisions'
+  - 'delete any virtual_tour media'
+  - 'delete any virtual_tour media revisions'
   - 'delete article revisions'
   - 'delete event revisions'
   - 'delete media'
@@ -99,6 +103,7 @@ permissions:
   - 'delete own page content'
   - 'delete own remote_video media'
   - 'delete own video media'
+  - 'delete own virtual_tour media'
   - 'delete page revisions'
   - 'edit any article content'
   - 'edit any audio media'
@@ -109,6 +114,7 @@ permissions:
   - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit any video media'
+  - 'edit any virtual_tour media'
   - 'edit own article content'
   - 'edit own audio media'
   - 'edit own document media'
@@ -117,6 +123,7 @@ permissions:
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own video media'
+  - 'edit own virtual_tour media'
   - 'revert all revisions'
   - 'revert any audio media revisions'
   - 'revert any basic block content revisions'
@@ -124,6 +131,7 @@ permissions:
   - 'revert any image media revisions'
   - 'revert any remote_video media revisions'
   - 'revert any video media revisions'
+  - 'revert any virtual_tour media revisions'
   - 'revert article revisions'
   - 'revert event revisions'
   - 'revert page revisions'
@@ -152,6 +160,7 @@ permissions:
   - 'view any remote_video media revisions'
   - 'view any unpublished content'
   - 'view any video media revisions'
+  - 'view any virtual_tour media revisions'
   - 'view article revisions'
   - 'view event revisions'
   - 'view latest version'

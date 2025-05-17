@@ -1,0 +1,52 @@
+uuid: 5033c973-b37c-4e52-b646-1fe7f8579a41
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.virtual_tour.field_embedded_code
+    - field.field.media.virtual_tour.field_media_image_1
+    - image.style.thumbnail
+    - media.type.virtual_tour
+  module:
+    - image
+    - text
+id: media.virtual_tour.media_library
+targetEntityType: media
+bundle: virtual_tour
+mode: media_library
+content:
+  field_embedded_code:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_image_1:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  publish_on: true
+  publish_state: true
+  scheduler_settings: true
+  status: true
+  uid: true
+  unpublish_on: true
+  unpublish_state: true
