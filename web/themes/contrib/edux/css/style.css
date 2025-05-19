@@ -1025,3 +1025,13 @@ div.eu-cookie-compliance-banner button.eu-cookie-compliance-default-button {
   font-weight: normal !important;
   text-shadow: none !important;
 }
+
+footer.footer h2.block-title {
+  color: var(--secondary);
+}
+footer.footer h3 {
+  color: #fff;
+}
+footer.footer strong {
+  color: #fff;
+}
