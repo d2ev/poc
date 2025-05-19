@@ -1035,3 +1035,7 @@ footer.footer h3 {
 footer.footer strong {
   color: #fff;
 }
+
+div.layout__region .taxonomy-term {
+  display: inherit !important;
+}

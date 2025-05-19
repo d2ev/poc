@@ -44,3 +44,8 @@ footer.footer {
         color: #fff;
     }
 }
+div.layout__region {
+    .taxonomy-term {
+        display: inherit !important;
+    }
+}
