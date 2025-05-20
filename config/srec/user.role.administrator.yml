@@ -1,0 +1,11 @@
+uuid: 90c5b9e9-344f-4b7f-a3a2-bcb755b305fa
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
+id: administrator
+label: 'CMS Admin'
+weight: 3
+is_admin: true
+permissions: {  }

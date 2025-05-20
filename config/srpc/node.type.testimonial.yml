@@ -1,0 +1,31 @@
+uuid: a6c7232c-2aa6-4fb9-be64-c43b25bc13a7
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: true
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Testimonial
+type: testimonial
+description: 'A testimonial is customer feedback showcasing satisfaction, credibility, and positive experiences with your service.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,17 @@
+uuid: 37fbbf8c-ef59-4c43-8af9-2abd2c7d62b9
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: 'Create upcoming events with time, location, and description'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false
