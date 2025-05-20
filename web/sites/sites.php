@@ -57,4 +57,4 @@
  */
 $sites['srec.shriramedutrust.in'] = 'srec.shriramedutrust.in';
 $sites['srpc.shriramedutrust.in'] = 'srpc.shriramedutrust.in';
-$sites['src.shriramedutrust.in'] = 'src.shriramedutrust.in';
+$sites['srs.shriramedutrust.in'] = 'srs.shriramedutrust.in';
